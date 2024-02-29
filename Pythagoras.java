@@ -2,6 +2,13 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Pythagoras {
+
+    public static double Pythagoras(double length, double width){
+        
+        double hypothenuse = Math.sqrt((length * length) + (width * width));
+        return hypothenuse;
+    }
+    
     public static void main(String[] args) {
         
         double x = 3.14;
@@ -50,21 +57,20 @@ public class Pythagoras {
         //int x = random.nextInt(6);
         //double y = random.nextDouble();
         //boolean z = random.nextBoolean();
-        int length = 0, width = 0;
+        double length = 0, width = 0;
 
-        //make sure length and width is not 0, else regenerate
         while(length == 0)
         {
-            length = random.nextInt(20);
+            length = random.nextDouble(20);
         }
         
         while(width == 0)
         {
-            width = random.nextInt(20);
+            width = random.nextDouble(20);
         }
 
-        //formula to calculate hypotenuse
-        double hypothenuse = Math.sqrt((length * length) + (width * width));
+        double hypothenuse = Pythagoras(length, width);
+
         System.out.println("Random generated length: " + length);
         System.out.println("Random generated length: " + width);
         System.out.println("The hypothenuse is: " + hypothenuse);
