@@ -7,20 +7,26 @@ public class If {
         //if-statements
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("What pet do you like?");
-        String pet = scanner.nextLine().trim();
-        String copy = pet;
-        String [] wordCheck = copy.trim().split(" ");
+        System.out.println("What is your age?");
+        int age = scanner.nextInt();
 
-        while(wordCheck.length != 1)
+        if(age >= 75)
         {
-            System.out.println("Please enter a appropriate species?");
-            pet = scanner.nextLine();
-            copy = pet;
-            wordCheck = copy.trim().split(" ");
+            System.out.println("You must have retired!");
+        }
+        else if(age >= 18)
+        {
+            System.out.println("Stay woke salary man!");
+        }
+        else if(age >= 13)
+        {
+            System.out.println("Enjoy your life!");
+        }
+        else
+        {
+            System.out.println("Stay well");
         }
 
-        System.out.printf("you are a %s lover", pet);
        
     }
 
