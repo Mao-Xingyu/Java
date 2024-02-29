@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Pythagoras {
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class Pythagoras {
         double integer = Math.round(x);
         double roundUp = Math.ceil(x);
         double roundDown = Math.floor(x);
-
+        
         System.out.println("bigger " + bigger);
         System.out.println("smaller " + smaller);
         System.out.println("absolute " + absolute);
@@ -41,5 +42,33 @@ public class Pythagoras {
         hypothenuse = Math.sqrt(Math.pow(length, 2)+Math.pow(width, 2));
 
         System.out.printf("The hypothenuse is: %.2f", hypothenuse );
+
+        //Generate random
+        Random random = new Random();
+
+        //generate random integer, double, and boolean
+        //int x = random.nextInt(6);
+        //double y = random.nextDouble();
+        //boolean z = random.nextBoolean();
+        int length = 0, width = 0;
+
+        //make sure length and width is not 0, else regenerate
+        while(length == 0)
+        {
+            length = random.nextInt(20);
+        }
+        
+        while(width == 0)
+        {
+            width = random.nextInt(20);
+        }
+
+        //formula to calculate hypotenuse
+        double hypothenuse = Math.sqrt((length * length) + (width * width));
+        System.out.println("Random generated length: " + length);
+        System.out.println("Random generated length: " + width);
+        System.out.println("The hypothenuse is: " + hypothenuse);
+        
+        
     }
 }
